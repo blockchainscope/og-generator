@@ -9,7 +9,8 @@ export default async function opengraph(req, res) {
   const browser = await chromium.puppeteer.launch({
     args: chromium.args,
     defaultViewport: { width: 1200, height: 630 },
-    executablePath: await chromium.executablePath,
+    // executablePath: await chromium.executablePath,
+    executablePath: 'http://localhost:3000/',
     headless: chromium.headless,
     ignoreHTTPSErrors: true,
   })
